@@ -127,13 +127,13 @@ def main(nick_name: str):
     import time
     now = time.time()
     usr_id = requests.get("https://api.twitter.com/2/users/by/username/"+nick_name, headers={
-                          'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAMwMZQEAAAAAS5Xs%2FWlF2rG5r%2Fn%2B4BO1g%2BpO1mQ%3DnGZr3bljfOxImVkKCKG3J8BNjGkER13lZ2SxXv6jvxYEJrRKg8'})
+                          'Authorization': 'Bearer '})
 
 
     usr_id = usr_id.json()
     ans = json.dumps(usr_id, indent=4, ensure_ascii=False)
     usr_locations = requests.get("https://api.twitter.com/2/users/"+usr_id["data"]["id"]+"/following?user.fields=location", headers={
-                                 'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAMwMZQEAAAAAS5Xs%2FWlF2rG5r%2Fn%2B4BO1g%2BpO1mQ%3DnGZr3bljfOxImVkKCKG3J8BNjGkER13lZ2SxXv6jvxYEJrRKg8'})
+                                 'Authorization': 'Bearer '})
     usr_locations = usr_locations.json()
     ans1 = json.dumps(usr_locations, indent=4, ensure_ascii=False)
     locations = locations_parser(usr_locations)

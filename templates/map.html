@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c6b1408f94b1463e9082dae4e5c9b723 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c6b1408f94b1463e9082dae4e5c9b723" ></div>
+        
+</body>
+<script>    
+    
+            var map_c6b1408f94b1463e9082dae4e5c9b723 = L.map(
+                "map_c6b1408f94b1463e9082dae4e5c9b723",
+                {
+                    center: [49.81763, 24.02295],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+
+            
+
+        
+    
+            var tile_layer_9f15fdabc37040c09b679d3f1f82a950 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var marker_216d5e1cdcb1498db8076ebe6c881007 = L.marker(
+                [49.81763, 24.02295],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_8b9a51224bd24db38774d811727fd81f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_216d5e1cdcb1498db8076ebe6c881007.setIcon(icon_8b9a51224bd24db38774d811727fd81f);
+        
+    
+        var popup_d9cc72a8d6d7442aa3673b9db13c279c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_788742bd3247453b831796be5d819780 = $(`<div id="html_788742bd3247453b831796be5d819780" style="width: 100.0%; height: 100.0%;">My location</div>`)[0];
+            popup_d9cc72a8d6d7442aa3673b9db13c279c.setContent(html_788742bd3247453b831796be5d819780);
+        
+
+        marker_216d5e1cdcb1498db8076ebe6c881007.bindPopup(popup_d9cc72a8d6d7442aa3673b9db13c279c)
+        ;
+
+        
+    
+    
+            var marker_9fd327cb01cc4caa95b3a3207e9227d0 = L.marker(
+                [44.9332, 7.5401],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_80fdcc5175884f3bb62f2b919aeaedd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ok-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9fd327cb01cc4caa95b3a3207e9227d0.setIcon(icon_80fdcc5175884f3bb62f2b919aeaedd4);
+        
+    
+        var popup_2e7b906cbbe54e3bb60e07f0f668b786 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f8c16d02de74cac9537fb5f5adb9f50 = $(`<div id="html_8f8c16d02de74cac9537fb5f5adb9f50" style="width: 100.0%; height: 100.0%;">Петро Порошенко</div>`)[0];
+            popup_2e7b906cbbe54e3bb60e07f0f668b786.setContent(html_8f8c16d02de74cac9537fb5f5adb9f50);
+        
+
+        marker_9fd327cb01cc4caa95b3a3207e9227d0.bindPopup(popup_2e7b906cbbe54e3bb60e07f0f668b786)
+        ;
+
+        
+    
+    
+            var marker_79f36b0cd4834e6badf5c021c48e9fe3 = L.marker(
+                [49.4871968, 31.2718321],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_aeea440f3f0d433086d67d13650e348f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ok-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_79f36b0cd4834e6badf5c021c48e9fe3.setIcon(icon_aeea440f3f0d433086d67d13650e348f);
+        
+    
+        var popup_576b74eab7d24155941e1b5d667bbd23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_040504c67e694cb8bc4a5cb8febca972 = $(`<div id="html_040504c67e694cb8bc4a5cb8febca972" style="width: 100.0%; height: 100.0%;">Володимир Зеленський</div>`)[0];
+            popup_576b74eab7d24155941e1b5d667bbd23.setContent(html_040504c67e694cb8bc4a5cb8febca972);
+        
+
+        marker_79f36b0cd4834e6badf5c021c48e9fe3.bindPopup(popup_576b74eab7d24155941e1b5d667bbd23)
+        ;
+
+        
+    
+    
+            var marker_a7060b4814ca4600b29533cf6ccd97d1 = L.marker(
+                [50.4500336, 30.5241361],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_cea5ac7d470941e591e339651589a5b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ok-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a7060b4814ca4600b29533cf6ccd97d1.setIcon(icon_cea5ac7d470941e591e339651589a5b7);
+        
+    
+        var popup_b8a7d9a41e9640e4b382307b76f8665b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb12afd940344ee48c337d719fd89cc3 = $(`<div id="html_cb12afd940344ee48c337d719fd89cc3" style="width: 100.0%; height: 100.0%;">U.S. Embassy Kyiv</div>`)[0];
+            popup_b8a7d9a41e9640e4b382307b76f8665b.setContent(html_cb12afd940344ee48c337d719fd89cc3);
+        
+
+        marker_a7060b4814ca4600b29533cf6ccd97d1.bindPopup(popup_b8a7d9a41e9640e4b382307b76f8665b)
+        ;
+
+        
+    
+    
+            var marker_ff813f86db474ead9d5e97c97b6ea1ae = L.marker(
+                [49.48643416974216, 31.270592757792603],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_ef06e357670e47968e06713080e11b08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ok-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ff813f86db474ead9d5e97c97b6ea1ae.setIcon(icon_ef06e357670e47968e06713080e11b08);
+        
+    
+        var popup_f44ae76969d54320aba3cd662ec355a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f5b59020b834ffe89d1283e03698f70 = $(`<div id="html_2f5b59020b834ffe89d1283e03698f70" style="width: 100.0%; height: 100.0%;">Ukraine / Україна</div>`)[0];
+            popup_f44ae76969d54320aba3cd662ec355a0.setContent(html_2f5b59020b834ffe89d1283e03698f70);
+        
+
+        marker_ff813f86db474ead9d5e97c97b6ea1ae.bindPopup(popup_f44ae76969d54320aba3cd662ec355a0)
+        ;
+
+        
+    
+    
+            var marker_14b70bacc6c24bc68050ccf7028b0d70 = L.marker(
+                [44.93417457690585, 7.540839423264422],
+                {}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+    
+            var icon_742f69d066b34c32babde5572923f883 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ok-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_14b70bacc6c24bc68050ccf7028b0d70.setIcon(icon_742f69d066b34c32babde5572923f883);
+        
+    
+        var popup_97104a0afd414f598489095687a622d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27bee5848ac04bd9ab6c70b26cf95d15 = $(`<div id="html_27bee5848ac04bd9ab6c70b26cf95d15" style="width: 100.0%; height: 100.0%;">Elon Musk</div>`)[0];
+            popup_97104a0afd414f598489095687a622d8.setContent(html_27bee5848ac04bd9ab6c70b26cf95d15);
+        
+
+        marker_14b70bacc6c24bc68050ccf7028b0d70.bindPopup(popup_97104a0afd414f598489095687a622d8)
+        ;
+
+        
+    
+    
+            var layer_control_844a617c981a4ead9fc3fae03ee1216c = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9f15fdabc37040c09b679d3f1f82a950,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_844a617c981a4ead9fc3fae03ee1216c.base_layers,
+                layer_control_844a617c981a4ead9fc3fae03ee1216c.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c6b1408f94b1463e9082dae4e5c9b723);
+        
+</script>

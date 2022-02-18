@@ -1,0 +1,55 @@
+{% block main %}
+<script type="text/javascript">
+  // function loading(){
+  //   document.getElementById("loading").style.display = "none";
+  //   document.getElementById("content").style.display = "block";     
+  // }
+  // document.getElementById("main_button").onclick = function() {
+  //   document.getElementById("loading").style.display = "none";
+  //   document.getElementById("content").style.display = "block";  
+  // }
+  function showLoading() {
+    var x = document.getElementById("loading");
+    var y = document.getElementById("content");
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+</script>
+<style>
+  html{
+    background-color: gray;
+  }
+  #loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    cursor: wait;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 25%;
+    }
+  .container{
+    align-items: center;
+  }
+</style>
+<img src="../static/loading.gif" id="loading"></img>
+<div class="container" id="content">
+
+      <h1>Find your friends on the map!</h1>
+      <hr>
+      <form action="/sign-up" method="POST">
+
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Select a username">
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="showLoading()">Sign up</button>
+
+      </form>
+</div>
+{% if feedback %}
+<p class="text-danger float-right">{{ feedback }}</p>
+{% endif %}
+{% endblock %}

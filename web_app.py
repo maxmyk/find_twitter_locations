@@ -90,7 +90,6 @@ def main(nick_name: str):
     Main function
     """
     from secret_key import s_key
-    print(s_key())
     usr_id = requests.get("https://api.twitter.com/2/users/by/username/"+nick_name, headers={
                           'Authorization': 'Bearer '+s_key()})
     usr_id = usr_id.json()

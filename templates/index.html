@@ -1,0 +1,73 @@
+{% block main %}
+<script type="text/javascript">
+  function showLoading() {
+    var x = document.getElementById("loading");
+    var y = document.getElementById("content");
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+</script>
+<style>
+  html{
+    /* background-color: black; */
+    background-color: #263238;
+    /* color: limegreen; */
+    color: #ffeb3b;
+    font-size: x-large;
+  }
+  #loading {
+    width: 250px;
+    height: 250px;
+    display: none;
+    cursor: wait;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 25%;
+    height: 25%; */
+    }
+  .container{
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    padding: 5%;
+  }
+  .form-control{
+    width: 70%;
+    padding: 2%;
+    margin:2%;
+    float: left;
+  }
+  .btn-primary{
+    width: 20%;
+    padding: 2%;
+    margin:2%;
+    float: right;
+  }
+  hr{
+    width: 95%;
+  }
+  .text-danger{
+    color:#ff675c;
+  }
+</style>
+<img src="../static/loading.gif" id="loading"></img>
+<div class="container" id="content">
+  <hr>
+  <h1>Find your friends on the map!</h1>
+  <hr>
+  <form action="/show-map" method="POST">
+    <input type="text" class="form-control" id="username" name="username" placeholder="Select a username">
+    <button type="submit" class="btn btn-primary" onclick="showLoading()">Find!</button>
+  </form>
+  {% if feedback %}
+  <div>
+    <p class="text-danger">{{ feedback[0] }}</p>
+    <p class="text-danger">{{ feedback[1] }}</p>
+    <p class="text-danger">{{ feedback[2] }}</p>
+    <p class="text-danger">{{ feedback[3] }}</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,26 +1,21 @@
 """
-3. Розробити web-додаток за допомогою якого можна
-буде зображати на карті дані (поле "location") про
-товаришів (людей, на яких ви підписані) вказаного
-облікового запису в Twitter. Значення поля
-"location", яке вказав товариш повинно зображатися
-на карті довільним типом маркера, але повинно
-містити також й ім'я цього товариша  (значення
-поля "screen_name"). Web-додаток повинен бути
-розгорнутий на сервісі https://www.pythonanywhere.com
-
+Web app main module
+Uses Flask to create webpage
 """
+
+# Importing necessary libraries
 from flask import Flask, render_template, request, redirect
 import web_app
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def form():
-    return render_template('form.html')
+    return render_template('index.html')
 
 
-@app.route("/sign-up", methods=["GET", "POST"])
+@app.route("/show-map", methods=["POST"])
 def sign_up():
 
     if request.method == "POST":
@@ -35,20 +30,19 @@ def sign_up():
 
         if missing:
             feedback = f"Missing field for {', '.join(missing)}"
-            return render_template("form.html", feedback=feedback)
+            return render_template("index.html", feedback=feedback)
         else:
             try:
-                web_app.main(username)
+                usr_map = web_app.main(username)
+                return usr_map.get_root().render()
             except Exception as e:
-                print(f'An {e} occured in the main function')
-            return redirect(request.url)
-    return render_template("map.html")
-
-
-# def index():
-#     start_coords = (46.9540700, 142.7360300)
-#     folium_map = folium.Map(location=start_coords, zoom_start=14)
-#     return folium_map._repr_html_()
+                print(f'An {e} error occured in the main function')
+                feedback = [f'An {e} error occured in the main function!',
+                    f'Please, check the correctness of inputed nickname and try again.',
+                    f'If that doesen\'t help, you probably exceeded the number of requests.',
+                    f'Try again in a few minutes.']
+            return render_template("index.html", feedback=feedback)
+            # return redirect(request.url)
 
 
 if __name__ == '__main__':
